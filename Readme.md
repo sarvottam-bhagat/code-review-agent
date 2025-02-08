@@ -64,12 +64,39 @@ PS : I have deployed this project on vercel as serverless functions but in free 
    ```bash
    celery -A app.worker worker --loglevel=info
     ```
+## Using the API:
+1. **Initiate a code review task:**
+```bash
+curl -X POST http://localhost:8000/analyze-pr \
+-H "Content-Type: application/json" \
+-d '{
+    "repo_url": "https://github.com/username/repo",
+    "pr_number": 123,
+    "github_token": "your_github_token"  # Optional
+}'
+```
+2. **Response:**
+```bash
+{
+    "task_id": "your_task_id"
+}
+```
+3. **Check the status of the task:**
+```bash
+curl http://localhost:8000/status/your_task_id
+```
+4. **Get the results of the task:**
+```bash
+curl http://localhost:8000/results/your_task_id
+```
+
 ## Dummy Env file
 
 ```bash
 CELERY_BROKER_URL=redis://127.0.0.1:6379/0
 CELERY_RESULT_BACKEND=redis://127.0.0.1:6379/0
-LLM_API_KEY=your_llm_api_key (OpenAI Secret key)
+LLM_API_KEY=your_llm_api_key (OpenAI Secret key) or 
+GEMINI_API_KEY=your_gemini_api_key (Google Secret key)
 ```
 ## Design document (How this Project is built ?)
 
