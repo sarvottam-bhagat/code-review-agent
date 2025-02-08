@@ -32,6 +32,29 @@ PS : I have deployed this project on vercel as serverless functions but in free 
         * Detailed information about each issue (type, line number, description, suggestion).
         * Summary of the overall code review findings.
 
+## Install Redis
+1. **From the terminal, run:**
+```bash
+brew install redis
+```
+2. **Start Redis server:**
+```bash
+brew services start redis
+```
+3. **Verify Redis is running:**
+```bash
+brew services info redis
+```
+4. **redis-cli:**
+```bash
+redis-cli 
+```
+5. **Test Redis connection:**
+```bash
+127.0.0.1:6379> ping
+PONG
+```
+
 ## Installation
 
 1. **Clone the repository:**
