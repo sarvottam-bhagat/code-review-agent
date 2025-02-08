@@ -60,11 +60,11 @@ PONG
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/github-code-review-agent.git
+   git clone https://github.com/sarvottam-bhagat/code-review-agent.git
    ```
 2. **got to the repository:**
    ```bash
-   cd github-code-review-agent
+   cd code-review-agent
    ```
 3. **Create the virtual environment:**
    ```bash
