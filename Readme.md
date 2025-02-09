@@ -2,7 +2,6 @@
 
 This project implements an autonomous code review agent system that utilizes AI to analyze GitHub pull requests. The agent leverages a combination of FastAPI, Celery, and a chosen LLM model (or Ollama for local model running) to provide efficient and insightful code reviews.
 
-PS : I have deployed this project on vercel as serverless functions but in free version I can start long running celery workers on vercel hence it is not working on free deployment :(
 
 ## Features
 
